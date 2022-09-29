@@ -1,0 +1,223 @@
+
+* {
+  box-sizing: border-box;
+  font-family: "Helvetica";
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body,
+.header,
+.flight,
+.flight-active,
+.flight-progress,
+.flight-progress-track,
+.flight-details thead,
+.flight-details-estimated {
+  transition: all 300ms ease-in-out;
+  transition-delay: 0ms;
+}
+body {
+  font-family: Ciutadella;
+  padding-bottom: 20px;
+}
+.header {
+  padding: 20px;
+  padding-bottom: 60px;
+  margin-bottom: -40px;
+  font-size: 40px;
+  font-weight: 600;
+  display: flex;
+  background-color: darkorange;
+  align-items: center;
+  justify-content: space-between;
+}
+.flight {
+  padding: 20px;
+  margin: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+  border-bottom: 5px solid transparent;
+  background-color: white
+}
+.flight-active {
+  font-size: 20px;
+  z-index: 2;
+  position: relative;
+  background-color: whitesmoke;
+
+}
+.label {
+  font-size: 0.8em;
+  padding: 0.35em 0.4em 0.2em 0.4em;
+  margin-right: 0.4em;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  top: -2px;
+}
+.toggle {
+  font-size: 0.8em;
+  opacity: 0.5;
+  position: relative;
+  top: 5px;
+  cursor: pointer;
+}
+.label-green {
+  background: #38b071;
+  color: #f0f0f0;
+}
+.label-red {
+  background: red;
+  color: #f0f0f0;
+}
+
+.label-orange {
+  background: orange;
+  color: #f0f0f0;
+}
+.label-yellow {
+  background: #fed453;
+  color: #000;
+}
+.flight-heading {
+  font-size: 1.25em;
+  flex: 1 0 100%;
+}
+.flight-desc {
+  font-size: 0.9em;
+  margin-top: 0.4em;
+}
+.flight-cities {
+  flex: 1 0 100%;
+  display: flex;
+  margin: 0.8em 0;
+}
+.flight-progress {
+  flex: 1 0 auto;
+  height: 4px;
+  align-self: center;
+  margin: 0 15px;
+}
+.flight-active .flight-progress-track {
+  width: 70%;
+  height: 100%;
+  text-align: right;
+  font-size: 2.6em;
+  line-height: 0.25;
+  color: #2aa565;
+  letter-spacing: -0.05em;
+}
+
+.flight .flight-progress-track {
+  width: 0%;
+  height: 100%;
+  text-align: right;
+  font-size: 2.6em;
+  line-height: 0.25;
+  color: #2aa565;
+  letter-spacing: -0.05em;
+}
+
+.flight .flight-progress-track-aa {
+
+  width: 30%;
+  height: 100%;
+  text-align: right;
+  font-size: 2.6em;
+  line-height: 0.25;
+  color: #2aa565;
+  letter-spacing: -0.05em;
+
+}
+
+.flight-leg {
+  flex: 1 0 51%;
+  display: flex;
+}
+.flight-to {
+  text-align: right;
+  justify-content: flex-end;
+}
+.flight-to .flight-city {
+  text-align: right;
+}
+.flight-city {
+  font-size: 1.875em;
+}
+.flight-details {
+  font-size: 1.125em;
+}
+.flight-details td + td {
+  padding-left: 15px;
+}
+
+.light-theme {
+  background: grey;
+  color: #000;
+}
+
+.light-theme .dark {
+  display: none;
+}
+.light-theme .header {
+  background: darkorange;
+  color: whitesmoke;
+}
+.light-theme .flight {
+  background: whitesmoke;
+  border-bottom-color: #dfdfdf;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+}
+.light-theme .flight-active {
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.3);
+  background: #fff;
+  border-color: #fff;
+}
+.light-theme .flight-progress {
+  background: #f0f0f0;
+}
+.light-theme .flight-progress .flight-progress-track {
+  background: #30b16f;
+}
+.light-theme .flight-details thead {
+  color: black
+}
+.light-theme .flight-details-estimated {
+  color: black
+}
+.dark-theme {
+  background: #1c1c1c;
+  color: #fff;
+}
+.dark-theme .light {
+  display: none;
+}
+.dark-theme .header {
+  background: darkorange;
+  color: grey;
+}
+.dark-theme .flight {
+  background: #323232;
+  border-bottom-color: #202020;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+}
+.dark-theme .flight-active {
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.3);
+  background: #424242;
+  border-color: transparent;
+}
+.dark-theme .flight-progress {
+  background: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .flight-progress .flight-progress-track {
+  background: #30b16f;
+}
+.dark-theme .flight-details thead {
+  color: whitesmoke;
+}
+.dark-theme .flight-details-estimated {
+  color: whitesmoke;
+}
